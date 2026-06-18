@@ -1,33 +1,56 @@
-EXIT=2
+EXIT=0
 --- STDOUT ---
-=== 训练进度 ===
+=== train.log 行数 ===
+23301 /root/train.log
+=== 最后20行 ===
 
+  8%|▊         | 48/585 [00:48<08:01,  1.11it/s][A
 
-  0%|          | 0/585 [00:00<?, ?it/s][A
+  8%|▊         | 49/585 [00:49<07:55,  1.13it/s][A
 
-  0%|          | 2/585 [00:01<06:13,  1.56it/s][A
-=== 磁盘 ===
-Filesystem      Size  Used Avail Use% Mounted on
-overlay          79G   19G   57G  25% /
+  9%|▊         | 50/585 [00:50<07:48,  1.14it/s][A
 
-=== 网络端口监听 ===
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
-tcp        0      0 0.0.0.0:23              0.0.0.0:*               LISTEN      23/sshd: /usr/sbin/ 
-tcp        0      0 0.0.0.0:8888            0.0.0.0:*               LISTEN      30/python3.13       
-tcp        0      0 127.0.0.1:37951         0.0.0.0:*               LISTEN      -                   
-tcp6       0      0 :::22                   :::*                    LISTEN      -                   
-tcp6       0      0 :::23                   :::*                    LISTEN      23/sshd: /usr/sbin/ 
-tcp6       0      0 :::2375                 :::*                    LISTEN      -                   
-tcp6       0      0 :::8889                 :::*                    LISTEN      62/filebrowser      
+  9%|▊         | 51/585 [00:51<08:26,  1.05it/s][A
 
-=== 防火墙 ===
+  9%|▉         | 52/585 [00:52<09:16,  1.04s/it][A
 
-=== 我的文件改动 ===
--rw-r--r-- 1 root root 299371912 Jun 18 12:32 /root/checkpoint-1850.tar.gz
--rw-r--r-- 1 root root      1723 Jun 18 12:50 /root/cmd_relay.py
--rw-r--r-- 1 root root       207 Jun 18 12:52 /root/relay.log
+  9%|▉         | 53/585 [00:53<09:43,  1.10s/it][A
+
+  9%|▉         | 54/585 [00:54<10:00,  1.13s/it][A
+
+  9%|▉         | 55/585 [00:56<10:08,  1.15s/it][A
+
+ 10%|▉         | 56/585 [00:57<10:15,  1.16s/it][A
+
+ 10%|▉         | 57/585 [00:58<10:13,  1.16s/it][A
+
+ 10%|▉         | 58/585 [00:59<10:10,  1.16s/it][A
+
+ 10%|█         | 59/585 [01:00<10:06,  1.15s/it][A
+
+ 10%|█         | 60/585 [01:01<09:59,  1.14s/it][A
+
+ 10%|█         | 61/585 [01:03<09:52,  1.13s/it][A
+
+ 11%|█         | 62/585 [01:04<09:47,  1.12s/it][A
+
+ 11%|█         | 63/585 [01:05<09:41,  1.11s/it][A
+
+ 11%|█         | 64/585 [01:06<09:36,  1.11s/it][A
+
+ 11%|█         | 65/585 [01:07<09:31,  1.10s/it][A
+
+ 11%|█▏        | 66/585 [01:08<09:27,  1.09s/it][A
+
+ 11%|█▏        | 67/585 [01:09<09:24,  1.09s/it][A=== 训练进程 ===
+root         168 99.5  3.4 129525616 3440880 ?   Rl   04:12 518:34 python3 /root/train_v3.py
+=== 谁改了sshd ===
+/etc/ssh/sshd_config:Port 23
+=== relay.log ===
+nohup: ignoring input
+RELAY STARTED
+[EXEC] echo "hello from relay" && date && uname -a
+[EXEC] echo "=== 训练进度 ===" && tail -3 ~/train.log && echo "" && echo "=== 磁盘 ===" && df -h / && echo "" && 
+[EXEC] echo "=== train.log 行数 ===" && wc -l ~/train.log && echo "=== 最后20行 ===" && tail -20 ~/train.log && 
 
 --- STDERR ---
