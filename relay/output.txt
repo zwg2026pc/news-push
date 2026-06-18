@@ -1,7 +1,33 @@
-EXIT=0
+EXIT=2
 --- STDOUT ---
-hello from relay
-Thu Jun 18 12:50:50 UTC 2026
-Linux ed0507c2a15a 5.15.0-113-generic #123-Ubuntu SMP Mon Jun 10 08:16:17 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+=== 训练进度 ===
+
+
+  0%|          | 0/585 [00:00<?, ?it/s][A
+
+  0%|          | 2/585 [00:01<06:13,  1.56it/s][A
+=== 磁盘 ===
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          79G   19G   57G  25% /
+
+=== 网络端口监听 ===
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:23              0.0.0.0:*               LISTEN      23/sshd: /usr/sbin/ 
+tcp        0      0 0.0.0.0:8888            0.0.0.0:*               LISTEN      30/python3.13       
+tcp        0      0 127.0.0.1:37951         0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::23                   :::*                    LISTEN      23/sshd: /usr/sbin/ 
+tcp6       0      0 :::2375                 :::*                    LISTEN      -                   
+tcp6       0      0 :::8889                 :::*                    LISTEN      62/filebrowser      
+
+=== 防火墙 ===
+
+=== 我的文件改动 ===
+-rw-r--r-- 1 root root 299371912 Jun 18 12:32 /root/checkpoint-1850.tar.gz
+-rw-r--r-- 1 root root      1723 Jun 18 12:50 /root/cmd_relay.py
+-rw-r--r-- 1 root root       207 Jun 18 12:52 /root/relay.log
 
 --- STDERR ---
