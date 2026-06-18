@@ -1,5 +1,13 @@
 EXIT=1
 --- STDOUT ---
-=== Jupyter token ===
+root          24  0.0  0.0  33252 26860 ?        S    04:09   0:04 /usr/bin/python3 /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+root          30  0.0  0.1 344552 114428 ?       Sl   04:09   0:02 /usr/local/miniconda3/bin/python3.13 /usr/local/miniconda3/bin/jupyter-lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token=UCloud-CompShare-66588f1f8c1e9a0e8fa2c0f5c42bf8a5 --notebook-dir=/
+root         168 99.5  3.4 129525616 3440880 ?   Rl   04:12 524:33 python3 /root/train_v3.py
+root         937  0.0  0.0  15376 11460 ?        S    12:50   0:00 python3 /root/cmd_relay.py
+---
+/usr/local/miniconda3/envs/py312/bin/python3
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'jupyter_server'
 
 --- STDERR ---
